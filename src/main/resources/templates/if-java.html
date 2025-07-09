@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>if в Java — В стиле Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зеленый фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Условия в Java — как логические редстоны в Minecraft</h1>
+
+    <p>В Minecraft ты строишь механизмы с помощью редстоунов, датчиков и факелов. В Java у тебя есть нечто похожее — условный оператор <code>if</code>. Он позволяет программе принимать решения.</p>
+
+    <div class="block">
+        <h2>Что такое if?</h2>
+        <p><code>if</code> — это ключевое слово, которое запускает выполнение блока кода только если условие истинно (<code>true</code>). Это как нажатие кнопки: если сигнал есть — механизм сработает.</p>
+        <pre><code>
+if (hasKey) {
+    System.out.println("Дверь открыта!");
+}
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Полный синтаксис</h2>
+        <p>Ты можешь добавить альтернативную ветку с помощью <code>else</code>, а также проверять несколько условий через <code>else if</code>.</p>
+        <pre><code>
+if (health <= 0) {
+    System.out.println("Игрок погиб.");
+} else if (health < 5) {
+    System.out.println("Осторожно! Здоровье низкое.");
+} else {
+    System.out.println("Всё в порядке!");
+}
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Пример из мира Minecraft</h2>
+        <p>Представь, что ты пишешь мод для проверки уровня голода:</p>
+        <pre><code>
+int hunger = 3;
+
+if (hunger == 0) {
+    System.out.println("Вы слишком голодны! Нужно есть.");
+} else if (hunger < 5) {
+    System.out.println("Стоит перекусить.");
+} else {
+    System.out.println("Вы сыты и готовы к приключениям!");
+}
+        </code></pre>
+        </p>
+    </div>
+
+    <div class="block">
+        <h2>Логические операции</h2>
+        <p>Ты можешь комбинировать условия:</p>
+        <ul>
+            <li><code>&&</code> — И (оба условия должны быть истинными)</li>
+            <li><code>||</code> — ИЛИ (хотя бы одно условие должно быть истинным)</li>
+            <li><code>!</code> — НЕ (меняет результат на противоположный)</li>
+        </ul>
+        <pre><code>
+if (hasSword && isMonsterNear) {
+    System.out.println("Атакуй!");
+} else if (!isDay) {
+    System.out.println("Нужно спрятаться!");
+}
+        </code></pre>
+    </div>
+
+    <p>Используя <code>if</code>, ты создаешь "интеллект" для своей программы — она начинает реагировать на происходящее, как настоящий игрок в Minecraft.</p>
+
+    <p>Попробуй использовать условия в своём первом проекте в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA</a>. Она поддерживает все новинки Java 24, чтобы ты мог работать с последними возможностями языка!</p>
+</div>
+
+</body>
+</html>

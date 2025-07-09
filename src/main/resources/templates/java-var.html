@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Переменные в Java - В стиле Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зеленый фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Переменные в Java — как блоки в Minecraft</h1>
+
+    <p>Как в Minecraft ты строишь мир из блоков, так и в Java ты создаешь программы с помощью переменных — базовых "строительных элементов" кода.</p>
+
+    <div class="block">
+        <h2>Что такое переменная?</h2>
+        <p>Переменная — это контейнер для хранения данных. У неё есть:</p>
+        <ul>
+            <li><strong>Тип</strong> — определяет, какие данные может хранить переменная</li>
+            <li><strong>Имя</strong> — уникальный идентификатор переменной</li>
+            <li><strong>Значение</strong> — то, что хранится внутри переменной</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>Примеры переменных в Java</h2>
+        <p>Создадим несколько переменных:</p>
+        <pre><code>
+int age = 15;
+String name = "Steve";
+double speed = 4.3;
+boolean isCreative = true;
+        </code></pre>
+        <p>Каждая из этих переменных — отдельный "блок", который ты можешь использовать в программе!</p>
+    </div>
+
+    <div class="block">
+        <h2>Основные типы переменных</h2>
+        <table width="100%">
+            <tr>
+                <th>Тип</th>
+                <th>Описание</th>
+                <th>Пример</th>
+            </tr>
+            <tr>
+                <td><code>int</code></td>
+                <td>Целое число</td>
+                <td><code>int level = 5;</code></td>
+            </tr>
+            <tr>
+                <td><code>double</code></td>
+                <td>Дробное число</td>
+                <td><code>double health = 20.0;</code></td>
+            </tr>
+            <tr>
+                <td><code>String</code></td>
+                <td>Текст (строка)</td>
+                <td><code>String playerName = "Notch";</code></td>
+            </tr>
+            <tr>
+                <td><code>boolean</code></td>
+                <td>Логическое значение: <code>true</code> или <code>false</code></td>
+                <td><code>boolean canFly = false;</code></td>
+            </tr>
+        </table>
+    </div>
+
+    <p>Хочешь научиться создавать свои сервера или моды Minecraft? Начни с понимания переменных — это основа твоего будущего кода!</p>
+
+    <p>Попробуй написать свой первый код с переменными в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA</a>, и строй свой цифровой мир так же, как в Minecraft!</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Методы String — В стиле Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зеленый фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #c8e6c9;
+            text-align: left;
+        }
+
+        th {
+            background-color: #a5d6a7;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Методы String в Java — как инструменты в инвентаре</h1>
+
+    <p>Как в Minecraft у тебя есть разные инструменты для добычи, строительства и выживания, так и в Java у класса <code>String</code> есть мощные методы для работы с текстом.</p>
+
+    <div class="block">
+        <h2>Что такое String?</h2>
+        <p><code>String</code> — это не просто текст. Это объект, который содержит в себе множество полезных функций. Представь его как сундук с инструментами!</p>
+        <pre><code>
+String message = "Привет, Майнкрафт!";
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Популярные методы String</h2>
+        <table>
+            <tr>
+                <th>Метод</th>
+                <th>Описание</th>
+                <th>Пример</th>
+            </tr>
+            <tr>
+                <td><code>length()</code></td>
+                <td>Возвращает длину строки</td>
+                <td><code>"Java".length(); // 4</code></td>
+            </tr>
+            <tr>
+                <td><code>charAt(int index)</code></td>
+                <td>Возвращает символ по указанному индексу</td>
+                <td><code>"Hello".charAt(1); // 'e'</code></td>
+            </tr>
+            <tr>
+                <td><code>substring(int start, int end)</code></td>
+                <td>Возвращает часть строки</td>
+                <td><code>"Minecraft".substring(0, 4); // "Mine"</code></td>
+            </tr>
+            <tr>
+                <td><code>toUpperCase()</code></td>
+                <td>Переводит строку в верхний регистр</td>
+                <td><code>"hi".toUpperCase(); // "HI"</code></td>
+            </tr>
+            <tr>
+                <td><code>toLowerCase()</code></td>
+                <td>Переводит строку в нижний регистр</td>
+                <td><code>"HELLO".toLowerCase(); // "hello"</code></td>
+            </tr>
+            <tr>
+                <td><code>replace(char oldChar, char newChar)</code></td>
+                <td>Заменяет символы в строке</td>
+                <td><code>"boom".replace('o', 'x'); // "bx xm"</code></td>
+            </tr>
+            <tr>
+                <td><code>equals(Object anObject)</code></td>
+                <td>Сравнивает строки на равенство</td>
+                <td><code>"apple".equals("Apple"); // false</code></td>
+            </tr>
+            <tr>
+                <td><code>contains(CharSequence s)</code></td>
+                <td>Проверяет, содержит ли строка другую строку</td>
+                <td><code>"Minecraft".contains("craft"); // true</code></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="block">
+        <h2>Практический пример</h2>
+        <p>Допустим, ты хочешь проверить, содержит ли никнейм игрока слово "Admin":</p>
+        <pre><code>
+String username = "SuperAdmin";
+if (username.contains("Admin")) {
+    System.out.println("Это админ!");
+}
+        </code></pre>
+    </div>
+
+    <p>Изучая методы <code>String</code>, ты становишься настоящим мастером текстовой магии! Это поможет тебе создавать сложные логики, обрабатывать ввод пользователя и работать с файлами в своих проектах.</p>
+
+    <p>Попробуй использовать эти методы в своём первом Java-проекте в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA</a>. Она поддерживает все новинки Java 24, чтобы ты мог работать с последними возможностями языка!</p>
+</div>
+
+</body>
+</html>
