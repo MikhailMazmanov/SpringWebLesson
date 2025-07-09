@@ -12,12 +12,12 @@
         /* Общие настройки */
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #d4ecdd; /* Светло-зеленый фон, как трава в Майнкрафте */
+            background-color: #d4ecdd; /* Светло-зеленый фон */
             color: #3b3b3b;
             font-family: 'Minecraftia', monospace, sans-serif;
             line-height: 1.6;
@@ -27,6 +27,28 @@
             max-width: 900px;
             margin: auto;
             padding: 20px;
+            position: relative;
+        }
+
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #8bc34a;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .menu-button:hover {
+            background-color: #7cb342;
+        }
+
+        main {
+            margin-top: 60px;
         }
 
         h1 {
@@ -70,42 +92,53 @@
             h1 {
                 font-size: 1.5em;
             }
+
+            .menu-button {
+                top: 10px;
+                left: 10px;
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Java — это не только код, это целый мир!</h1>
+    <button class="menu-button" onclick="window.location.href='/'">Menu</button>
 
-    <p>Java — один из самых популярных языков программирования. Он используется для создания:</p>
+    <main>
+        <h1>Java — это не только код, это целый мир!</h1>
 
-    <ul>
-        <li>Android-приложений</li>
-        <li>Серверов и сетевых приложений</li>
-        <li>Игровых движков</li>
-        <li>Корпоративных систем</li>
-        <li>И, конечно же... игры <strong>Minecraft</strong>!</li>
-    </ul>
+        <p>Java — один из самых популярных языков программирования. Он используется для создания:</p>
 
-    <div class="block">
-        <h2>Почему Java и Minecraft?</h2>
-        <p>Minecraft был написан именно на Java, что позволило ему стать мощным и гибким проектом. Миллионы игроков и разработчиков используют Java для создания модов, плагинов и серверов.</p>
-    </div>
-
-    <div class="block">
-        <h2>Основные особенности Java</h2>
         <ul>
-            <li><strong>Кроссплатформенность:</strong> "Write once, run anywhere"</li>
-            <li><strong>Объектно-ориентированный:</strong> классы, наследование, инкапсуляция</li>
-            <li><strong>Богатые библиотеки:</strong> от GUI до сетевых протоколов</li>
-            <li><strong>Автоматическое управление памятью:</strong> сборка мусора (Garbage Collection)</li>
+            <li>Android-приложений</li>
+            <li>Серверов и сетевых приложений</li>
+            <li>Игровых движков</li>
+            <li>Корпоративных систем</li>
+            <li>И, конечно же... игры <strong>Minecraft</strong>!</li>
         </ul>
-    </div>
 
-    <p>Если ты любишь Minecraft и хочешь создавать свои собственные сервера или моды — <strong>Java — твой верный инструмент!</strong></p>
+        <div class="block">
+            <h2>Почему Java и Minecraft?</h2>
+            <p>Minecraft был написан именно на Java, что позволило ему стать мощным и гибким проектом. Миллионы игроков и разработчиков используют Java для создания модов, плагинов и серверов.</p>
+        </div>
 
-    <p>Хочешь начать? Попробуй запустить свой первый Minecraft-сервер или написать простую программу в <a href="https://www.jetbrains.com/idea/"  target="_blank">IntelliJ IDEA</a>.</p>
+        <div class="block">
+            <h2>Основные особенности Java</h2>
+            <ul>
+                <li><strong>Кроссплатформенность:</strong> "Write once, run anywhere"</li>
+                <li><strong>Объектно-ориентированный:</strong> классы, наследование, инкапсуляция</li>
+                <li><strong>Богатые библиотеки:</strong> от GUI до сетевых протоколов</li>
+                <li><strong>Автоматическое управление памятью:</strong> сборка мусора (Garbage Collection)</li>
+            </ul>
+        </div>
+
+        <p>Если ты любишь Minecraft и хочешь создавать свои собственные сервера или моды — <strong>Java — твой верный инструмент!</strong></p>
+
+        <p>Хочешь начать? Попробуй запустить свой первый Minecraft-сервер или написать простую программу в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA</a>.</p>
+    </main>
 </div>
 
 </body>
