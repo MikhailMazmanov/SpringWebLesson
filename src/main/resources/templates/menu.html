@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Меню — Java в стиле Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зелёный фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            color: #2e7d32;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<div class="container">
+    <h1>Меню — твой путеводитель по Java</h1>
+
+    <p>Выбери тему, чтобы углубиться в мир программирования. Каждый раздел — как отдельный биом в мире Java. Исследуй, строй и крафть знания!</p>
+
+    <div class="block">
+        <h2>1. Java Core</h2>
+        <ul>
+            <li><a href="/info-java">Что такое Java?</a></li>
+            <li><a href="/java-var">Переменные</a></li>Миша
+            <li><a href="/">методы класса String</a></li>Миша
+            <li><a href="/">if</a></li>Миша
+            <li><a href="/">массивы</a></li>Илья
+            <li><a href="/">циклы</a></li>Илья
+            <li><a href="/">методы</a></li>Илья
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>2. Collections</h2>
+        <ul>
+            <li><a href="/info-java-collection">Что такое коллекции?</a></li>
+            <li><a href="/info-java-list-set-map">List, Set, Map — в чём разница?</a></li>
+            <li><a href="/info-java-streams">Stream API и обработка данных</a></li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>3. Spring</h2>
+        <ul>
+            <li><a href="/info-spring">Что такое Spring Framework?</a></li>
+            <li><a href="/info-spring-boot">Spring Boot за 5 минут</a></li>
+            <li><a href="/info-spring-data">Spring Data и работа с БД</a></li>
+        </ul>
+    </div>
+
+    <p>Ты можешь изучать темы по порядку или сразу переходить к интересующему разделу. Удачи в освоении Java — это целый мир возможностей!</p>
+</div>
+
 </body>
 </html>

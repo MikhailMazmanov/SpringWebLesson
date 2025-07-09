@@ -1,10 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Spring Framework — В стиле Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зелёный фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            margin-top: 20px;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        pre {
+            background-color: #dcfce7;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 4px;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<div class="container">
+    <h1>Spring Framework — как выращивать мощные приложения</h1>
+
+    <p>Если ты строишь сервер Minecraft, то знаешь: без правильных инструментов даже самую простую ферму не построишь. То же самое с Java-приложениями — без хорошего каркаса (фреймворка), проект быстро превратится в лабиринт.</p>
+
+    <p><strong>Spring</strong> — это твой набор инструментов для создания масштабируемых, устойчивых и удобных приложений. Он помогает автоматизировать рутину и сосредоточиться на сути.</p>
+
+    <div class="block">
+        <h2>Что такое Spring?</h2>
+        <p>Spring — это мощный фреймворк для разработки Java-приложений. Он предоставляет:</p>
+        <ul>
+            <li><strong>Inversion of Control (IoC):</strong> управление зависимостями без лишнего кода</li>
+            <li><strong>Spring Boot:</strong> быстрая сборка готовых к запуску приложений</li>
+            <li><strong>Data Access:</strong> работа с базами данных через Spring Data</li>
+            <li><strong>REST API:</strong> создание веб-сервисов за считанные минуты</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>Пример простого Spring Boot приложения</h2>
+        <p>Создадим простой REST-сервер, который говорит "Hello, Steve!" игроку.</p>
+        <pre><code>// Main класс приложения
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+
+// Контроллер
+@RestController
+class HelloController {
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello, Steve!";
+    }
+}</code></pre>
+        <p>Запустив приложение и перейдя по адресу <code>http://localhost:8080/hello</code>, ты получишь приветствие!</p>
+    </div>
+
+    <div class="block">
+        <h2>Почему Spring популярен?</h2>
+        <ul>
+            <li><strong>Модульность:</strong> можно использовать только нужные части</li>
+            <li><strong>Автоматизация:</strong> Spring делает много работы за тебя</li>
+            <li><strong>Поддержка сообщества:</strong> огромное количество примеров и документации</li>
+            <li><strong>Интеграция:</strong> работает с Hibernate, JPA, Security, WebFlux и многими другими</li>
+        </ul>
+    </div>
+
+    <p>Если ты хочешь создавать серверы Minecraft с API или строить сложные backend-системы — <strong>Spring станет твоим надёжным крафтовым станком!</strong></p>
+
+    <div class="block">
+        <h2>Полезные ссылки</h2>
+        <ul>
+            <li><a href=" https://spring.io/projects/spring-boot " target="_blank">Spring Boot</a> — начни с этого</li>
+            <li><a href="https://start.spring.io/ " target="_blank">Spring Initializr</a> — создай проект за пару кликов</li>
+            <li><a href="https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA</a> — идеально подходит для Spring</li>
+        </ul>
+    </div>
+
+    <p>Освоив Spring, ты сможешь строить не просто деревянные домики, а целые города из кода. Приступай!</p>
+</div>
+
 </body>
 </html>
