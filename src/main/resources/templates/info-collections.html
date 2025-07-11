@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Коллекции в Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd;
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Коллекции в Java — управляй данными с умом!</h1>
+
+    <p>Коллекции — это структуры данных, которые позволяют хранить и обрабатывать группы объектов. В отличие от массивов, коллекции могут динамически изменять свой размер и предлагают больше возможностей для работы с данными.</p>
+
+    <div class="block">
+        <h2>Что такое коллекции?</h2>
+        <p>Коллекции — это интерфейсы и классы из пакета java.util, предоставляющие гибкие способы хранения и управления данными.</p>
+
+        <p><strong>Пример:</strong></p>
+        <p>Импортируем ArrayList и List:</p>
+        <p>import java.util.ArrayList;</p>
+        <p>import java.util.List;</p>
+        <p>Создаем список:</p>
+        <p>List items = new ArrayList<>();</p>
+        <p>Добавляем элементы:</p>
+        <p>items.add("меч");</p>
+        <p>items.add("щит");</p>
+        <p>Выводим результат:</p>
+        <p>System.out.println(items);</p>
+        <p>Результат:</p>
+        <p>[меч, щит]</p>
+    </div>
+
+    <div class="block">
+        <h2>Основные типы коллекций</h2>
+        <ul>
+            <li><strong>List</strong> — упорядоченная коллекция, допускающая дубликаты (ArrayList, LinkedList).</li>
+            <li><strong>Set</strong> — коллекция без дублирующихся элементов (HashSet, TreeSet).</li>
+            <li><strong>Map</strong> — хранит пары ключ-значение (HashMap, TreeMap).</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>Пример List — список с доступом по индексу</h2>
+        <p>Импорт List и Arrays:</p>
+        <p>import java.util.List;</p>
+        <p>import java.util.Arrays;</p>
+        <p>Создаем список заметок:</p>
+        <p>List notes = Arrays.asList("Купить материалы", "Завершить проект");</p>
+        <p>Проходим по списку и выводим каждую заметку:</p>
+        <p>for (String note : notes) {</p>
+        <p>&nbsp;&nbsp;System.out.println("Заметка: " + note);</p>
+        <p>}</p>
+        <p>Результат:</p>
+        <p>Заметка: Купить материалы</p>
+        <p>Заметка: Завершить проект</p>
+    </div>
+
+    <div class="block">
+        <h2>Пример Set — уникальные элементы</h2>
+        <p>Попробуем добавить повторяющиеся значения:</p>
+        <p>Импорт HashSet и Set:</p>
+        <p>import java.util.HashSet;</p>
+        <p>import java.util.Set;</p>
+        <p>Создаем набор чисел:</p>
+        <p>Set numbers = new HashSet<>();</p>
+        <p>numbers.add(10);</p>
+        <p>numbers.add(10);</p>
+        <p>numbers.add(5);</p>
+        <p>Выводим содержимое:</p>
+        <p>System.out.println(numbers);</p>
+        <p>Результат:</p>
+        <p>[5, 10]</p>
+    </div>
+
+    <div class="block">
+        <h2>Пример Map — связь ключ-значение</h2>
+        <p>Импорт HashMap и Map:</p>
+        <p>import java.util.HashMap;</p>
+        <p>import java.util.Map;</p>
+        <p>Создаем инвентарь:</p>
+        <p>Map inventory = new HashMap<>();</p>
+        <p>inventory.put("меч", 1);</p>
+        <p>inventory.put("яблоко", 5);</p>
+        <p>Выводим количество яблок:</p>
+        <p>System.out.println("У тебя есть " + inventory.get("яблоко") + " яблок");</p>
+        <p>Результат:</p>
+        <p>У тебя есть 5 яблок</p>
+    </div>
+
+    <div class="block">
+        <h2>Stream API и коллекции</h2>
+        <p>Java 24 позволяет использовать потоки для удобной обработки данных:</p>
+        <p>Импорт List и Collectors:</p>
+        <p>import java.util.List;</p>
+        <p>import java.util.stream.Collectors;</p>
+        <p>Фильтруем список по условию:</p>
+        <p>List filtered = items.stream()</p>
+        <p>&nbsp;&nbsp;.filter(i -> i.startsWith("м"))</p>
+        <p>&nbsp;&nbsp;.collect(Collectors.toList());</p>
+        <p>Выводим результат:</p>
+        <p>System.out.println(filtered);</p>
+        <p>Результат:</p>
+        <p>[меч]</p>
+    </div>
+
+    <p>Коллекции — основа для эффективной работы с данными в Java. Они гибкие, мощные и поддерживаются современными инструментами разработки.</p>
+
+    <p>Попробуй работать с коллекциями уже сегодня в <a href=" https://www.jetbrains.com/idea/ " target="_blank" rel="noopener">IntelliJ IDEA 2025.1</a>. Она обеспечивает полную поддержку всех возможностей Java 24, включая стабильные stream gatherers и другие новые функции, чтобы ты мог работать с последними возможностями языка!</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="ru">
+        <head>
+        <meta charset="UTF-8">
+        <title>Циклы в Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зеленый фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Циклы в Java — повторяй до победного!</h1>
+
+    <p>Циклы позволяют выполнять один и тот же блок кода многократно. Они полезны, когда нужно обработать данные, перебрать элементы массивов или выполнить задачу несколько раз.</p>
+
+    <div class="block">
+        <h2>Цикл for — точное количество повторений</h2>
+        <p>Используется, если заранее известно, сколько раз должен выполниться код.</p>
+        <pre><code>
+for (int i = 0; i < 5; i++) {
+    System.out.println("Итерация №" + i);
+}
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>
+Итерация №0
+Итерация №1
+Итерация №2
+Итерация №3
+Итерация №4
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Цикл while — пока условие истинно</h2>
+        <p>Выполняется до тех пор, пока заданное условие остаётся верным.</p>
+        <pre><code>
+int count = 0;
+while (count < 3) {
+    System.out.println("Счётчик: " + count);
+    count++;
+}
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>
+Счётчик: 0
+Счётчик: 1
+Счётчик: 2
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Цикл do-while — сначала действуй, потом проверь</h2>
+        <p>Отличается тем, что тело цикла выполняется хотя бы один раз, даже если условие не выполнено.</p>
+        <pre><code>
+int x = 5;
+do {
+    System.out.println("Значение x: " + x);
+    x--;
+} while (x > 0);
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>
+Значение x: 5
+Значение x: 4
+Значение x: 3
+Значение x: 2
+Значение x: 1
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Цикл for-each — удобный перебор коллекций и массивов</h2>
+        <p>Упрощает работу с массивами и списками, избавляя от необходимости управлять индексами.</p>
+        <pre><code>
+String[] inventory = {"меч", "щит", "лук"};
+for (String item : inventory) {
+    System.out.println("Предмет: " + item);
+}
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>
+Предмет: меч
+Предмет: щит
+Предмет: лук
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Ключевые слова: break и continue</h2>
+        <p><code>break</code> — выходит из цикла.<br>
+            <code>continue</code> — пропускает текущую итерацию и переходит к следующей.</p>
+        <pre><code>
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // Пропустим число 5
+    }
+    if (i == 8) {
+        break; // Остановимся на 8
+    }
+    System.out.print(i + " ");
+}
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>0 1 2 3 4 6 7</code></pre>
+    </div>
+
+    <p>Циклы — мощный инструмент программирования. Используй их, чтобы автоматизировать рутинные операции и управлять потоком выполнения программы.</p>
+
+    <p>Начни использовать циклы уже сегодня в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA 2025.1</a>. Она обеспечивает полную поддержку всех возможностей Java 24, включая стабильные stream gatherers и другие новые функции, чтобы ты мог работать с последними возможностями языка!</p>
+</div>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

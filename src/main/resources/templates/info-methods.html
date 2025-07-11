@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="ru">
+        <head>
+        <meta charset="UTF-8">
+        <title>Методы в Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зеленый фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Методы в Java — упорядочь логику!</h1>
+
+    <p>Методы — это блоки кода, которые выполняют конкретную задачу и могут быть вызваны из разных частей программы. Они позволяют организовать код, сделать его понятнее и повторно используемым.</p>
+
+    <div class="block">
+        <h2>Что такое метод?</h2>
+        <p>Метод — это именованная часть программы, которая может принимать входные данные (аргументы), выполнять действия и возвращать результат.</p>
+        <pre><code>
+// Пример простого метода
+public static int add(int a, int b) {
+    return a + b;
+}
+        </code></pre>
+        <p>Вызов метода:</p>
+        <pre><code>
+int result = add(3, 5);
+System.out.println("Результат: " + result);
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>Результат: 8</code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Виды методов</h2>
+        <ul>
+            <li><strong>Статические методы</strong> — принадлежат классу, а не объекту.</li>
+            <li><strong>Нестатические методы</strong> — требуют создания экземпляра класса для вызова.</li>
+            <li><strong>Методы с возвращаемым значением</strong> — используют ключевое слово <code>return</code>.</li>
+            <li><strong>Методы без возврата</strong> — объявляются как <code>void</code>.</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>Пример метода без возврата</h2>
+        <pre><code>
+public static void greet(String name) {
+    System.out.println("Привет, " + name + "!");
+}
+
+// Вызов:
+greet("Алекс");
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>Привет, Алекс!</code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Перегрузка методов</h2>
+        <p>Java позволяет создавать несколько методов с одинаковым именем, но разными параметрами.</p>
+        <pre><code>
+public static int multiply(int a, int b) {
+    return a * b;
+}
+
+public static double multiply(double a, double b) {
+    return a * b;
+}
+        </code></pre>
+        <pre><code>
+System.out.println(multiply(3, 4));     // Целые числа
+System.out.println(multiply(2.5, 3.0)); // Дробные числа
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>
+12
+7.5
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Рекурсивные методы</h2>
+        <p>Метод может вызывать сам себя — это называется рекурсией. Например, вычисление факториала:</p>
+        <pre><code>
+public static int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}
+
+// Вызов:
+System.out.println(factorial(5));
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>120</code></pre>
+    </div>
+
+    <p>Методы помогают делить программу на логические части, облегчают чтение кода и упрощают его отладку. Используй их, чтобы сделать свои проекты чище и мощнее.</p>
+
+    <p>Попробуй работать с методами уже сегодня в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA 2025.1</a>. Она обеспечивает полную поддержку всех возможностей Java 24, включая стабильные stream gatherers и другие новые функции, чтобы ты мог работать с последними возможностями языка!</p>
+</div>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

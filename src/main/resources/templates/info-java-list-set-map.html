@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>List, Set, Map — в чём разница?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Подключение пиксельного шрифта -->
+  <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+  <style>
+    /* Общие настройки */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #d4ecdd; /* Светло-зеленый фон */
+      color: #3b3b3b;
+      font-family: 'Minecraftia', monospace, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #2e7d32;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p, li {
+      font-size: 1em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .block {
+      background-color: #f1f8e9;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 5px solid #8bc34a;
+      border-radius: 4px;
+    }
+
+    code {
+      background-color: #e8f5e9;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    pre {
+      background-color: #e8f5e9;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    /* Адаптация под мобильные устройства */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>List, Set, Map — в чём разница?</h1>
+
+  <p>Эти три типа — основа Java Collections Framework. У каждого своё предназначение:</p>
+  <ul>
+    <li><code>List</code> — упорядоченная коллекция с доступом по индексу.</li>
+    <li><code>Set</code> — набор уникальных элементов.</li>
+    <li><code>Map</code> — хранение данных в виде пар ключ-значение.</li>
+  </ul>
+
+  <div class="block">
+    <h2>List — список с порядком</h2>
+    <p>Элементы в List сохраняют свой порядок добавления и могут дублироваться. Каждый элемент имеет индекс.</p>
+    <pre><code>
+import java.util.List;
+import java.util.ArrayList;
+
+List<String> inventory = new ArrayList<>();
+inventory.add("меч");
+inventory.add("щит");
+inventory.add("щит");
+
+System.out.println(inventory);
+        </code></pre>
+    <p>Результат:</p>
+    <pre><code>[меч, щит, щит]</code></pre>
+  </div>
+
+  <div class="block">
+    <h2>Set — только уникальное</h2>
+    <p>Set не допускает повторяющихся элементов. Порядок может быть случайным или заданным (например, через <code>TreeSet</code>).</p>
+    <pre><code>
+import java.util.Set;
+import java.util.HashSet;
+
+Set<String> uniqueItems = new HashSet<>();
+uniqueItems.add("меч");
+uniqueItems.add("щит");
+uniqueItems.add("щит");
+
+System.out.println(uniqueItems);
+        </code></pre>
+    <p>Результат:</p>
+    <pre><code>[меч, щит]</code></pre>
+  </div>
+
+  <div class="block">
+    <h2>Map — связь ключ-значение</h2>
+    <p>Map используется для хранения ассоциаций. Ключи должны быть уникальными.</p>
+    <pre><code>
+import java.util.Map;
+import java.util.HashMap;
+
+Map<String>, Integer> prices = new HashMap<>();
+prices.put("меч", 100);
+prices.put("щит", 80);
+prices.put("меч", 90); // Перезаписывает старое значение
+
+System.out.println(prices.get("щит"));
+        </code></pre>
+    <p>Результат:</p>
+    <pre><code>80</code></pre>
+  </div>
+
+  <div class="block">
+    <h2>Когда что использовать?</h2>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="background-color: #e8f5e9;">
+        <th style="border: 1px solid #ccc; padding: 8px;">Тип</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Порядок</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Дубликаты</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Индекс</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Пример использования</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;"><code>List</code></td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Да</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Да</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Да</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Список задач</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;"><code>Set</code></td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Нет</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Нет</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Нет</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Уникальные теги</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 8px;"><code>Map</code></td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Нет</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Ключи нет, значения да</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Нет</td>
+        <td style="border: 1px solid #ccc; padding: 8px;">Словарь</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="block">
+    <h2>Stream API и коллекции</h2>
+    <p>Java 24 позволяет удобно обрабатывать данные из List, Set и Map с помощью Stream API:</p>
+    <pre><code>
+import java.util.stream.Collectors;
+
+String result = inventory.stream()
+    .filter(item -> item.startsWith("м"))
+    .collect(Collectors.joining(", "));
+
+System.out.println(result);
+        </code></pre>
+    <p>Результат:</p>
+    <pre><code>меч</code></pre>
+  </div>
+
+  <p>Знание различий между <code>List</code>, <code>Set</code> и <code>Map</code> помогает правильно выбирать структуры данных для решения конкретных задач.</p>
+
+  <p>Попробуй работать с коллекциями уже сегодня в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA 2025.1</a>. Она обеспечивает полную поддержку всех возможностей Java 24, включая стабильные stream gatherers и другие новые функции, чтобы ты мог работать с последними возможностями языка!</p>
+</div>
+
+</body>
+</html>

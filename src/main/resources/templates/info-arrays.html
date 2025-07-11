@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Массивы в Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение пиксельного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d4ecdd; /* Светло-зеленый фон */
+            color: #3b3b3b;
+            font-family: 'Minecraftia', monospace, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .block {
+            background-color: #f1f8e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8bc34a;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Массивы в Java — как контейнеры для данных</h1>
+
+    <p>Массивы позволяют хранить несколько значений одного типа в одной переменной. Это удобный способ организации данных, когда нужно работать с большим количеством однотипных элементов.</p>
+
+    <div class="block">
+        <h2>Что такое массив?</h2>
+        <p>Массив — это структура данных, которая содержит фиксированное количество элементов одного типа. Доступ к каждому элементу осуществляется по индексу, начиная с нуля.</p>
+        <pre><code>
+// Создание массива из 5 целых чисел
+int[] numbers = new int[5];
+
+// Заполнение ячеек
+numbers[0] = 10;
+numbers[1] = 64;
+numbers[2] = 32;
+numbers[3] = 5;
+numbers[4] = 1;
+        </code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Краткое создание массива</h2>
+        <p>Можно сразу задать значения при создании:</p>
+        <pre><code>
+String[] items = {"меч", "щит", "лук", "яблоко"};
+System.out.println("Третий предмет: " + items[2]);
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>Третий предмет: лук</code></pre>
+    </div>
+
+    <div class="block">
+        <h2>Пример работы с массивами</h2>
+        <p>Представь, что ты проверяешь список своих записей:</p>
+        <pre><code>
+String[] notes = {"Купить материалы", "Завершить проект", "Изучить Java 24"};
+
+for (String note : notes) {
+    System.out.println("Заметка: " + note);
+}
+        </code></pre>
+        <p>Этот код выведет все элементы массива, словно ты просматриваешь список дел.</p>
+    </div>
+
+    <div class="block">
+        <h2>Двумерные массивы — как таблицы</h2>
+        <p>Если тебе нужно больше порядка, используй двумерные массивы. Представь, что это таблица с рядами и колонками:</p>
+        <pre><code>
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+
+System.out.println("Элемент [1][2]: " + matrix[1][2]);
+        </code></pre>
+        <p>Результат:</p>
+        <pre><code>Элемент [1][2]: 6</code></pre>
+    </div>
+
+    <p>Массивы — основа для создания сложных структур данных. Используй их, чтобы управлять большим количеством информации в твоих проектах.</p>
+
+    <p>Начни использовать массивы уже сегодня в <a href=" https://www.jetbrains.com/idea/ " target="_blank">IntelliJ IDEA 2025.1</a>. Она обеспечивает полную поддержку всех возможностей Java 24, включая стабильные stream gatherers и другие новые функции, чтобы ты мог работать с последними возможностями языка!</p>
+</div>
+
+</body>
+</html>
